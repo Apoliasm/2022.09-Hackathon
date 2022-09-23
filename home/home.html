@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cbf9451708218b96499c4a0194caec93">
+    </script>
+    <script src="https://kit.fontawesome.com/cf459ed31b.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>ZeroWaste</title>
+</head>
+
+<body>
+    <div id="map">
+    </div>
+    <div id="buttons">
+        <ul>
+            <li>
+                <button id="add">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>등록</span>
+                </button>
+            </li>
+            <li><button id="userInfo"><i class="fa-solid fa-user"></i><span>내 정보</span></button></li>
+        </ul>
+    </div>
+    <button id="location" onclick="displayMarker(locPosition)"><i class="fa fa-crosshairs"></i></button>
+</body>
+
+</html>
