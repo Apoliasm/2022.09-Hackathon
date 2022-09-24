@@ -1,0 +1,691 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{
+    background-color:white;
+    overflow: hidden;
+}
+
+#init{
+    /*전체 배경*/
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: #FFFFFF;
+}
+
+
+#back{
+    /*뒤로가기*/
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 15px;
+    top: 27px;
+}
+
+#exchange_text{
+    /* 포인트 교환소 텍스트 */
+    position: absolute;
+    width: 115px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 6%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+    color: #000000;
+}
+
+#pointbox{
+
+    /*포인트쪽 동그라미*/
+    position: absolute;
+    width: 102px;
+    height: 34px;
+    right: 2%;
+    top: 28px;
+
+    background: #C6E0F3;
+    border-radius: 29px;
+
+}
+
+#point_text{
+
+    /*포인트 텍스트박스*/
+    position: absolute;
+    width: 51px;
+    height: 23px;
+    right: 4%;
+    top: 33px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+
+}
+
+#coin{
+    /*동전 그림*//*동전모양*/
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 21%;
+    top: 28px;
+    border-radius: 70%;
+    overflow: hidden;
+
+    background: #DA9D00;
+
+}
+
+
+#heartbox{
+    position: absolute;
+    width: 51px;
+    height: 35px;
+    left: 3%;
+    top: 12%;
+}
+
+#coffee_cakebox{
+    position: absolute;
+    width: 116px;
+    height: 35px;
+    left: 19%;
+    top: 12%;
+
+    background: #207EE1;
+    border-radius: 30px;
+
+}
+
+#coffee_caketext{
+
+    /* 커피&케이크 */
+    position: absolute;
+    width: 85px;
+    height: 23px;
+    left: 24%;
+    top: 13%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+
+}
+
+#chicken_box{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 71px;
+    height: 35px;
+    left: 53%;
+    top: 12%;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 30px;
+
+}
+
+#chicken_text{
+
+    position: absolute;
+    width: 30px;
+    height: 23px;
+    left: 59%;
+    top: 13%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #D9D9D9;
+
+}
+
+#fancy_box{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 84px;
+    height: 35px;
+    left: 75%;
+    top: 12%;
+
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 30px;
+
+}
+
+#fancy_text{
+
+    position: absolute;
+    width: 45px;
+    height: 23px;
+    left: 81%;
+    top: 13%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #D9D9D9;
+
+}
+
+#photo1{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    top: 20%;
+}
+
+#photo2{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    top: 36%;
+}
+
+#photo3{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    top: 52%;
+}
+
+#photo4{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    top: 68%;
+}
+
+#photo5{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 4%;
+    top: 84%;
+}
+
+#text1{
+
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 31%;
+    top: 21%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    
+    color: #000000;
+}
+
+#text2{
+
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 31%;
+    top: 37%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+
+}
+
+#text3{
+
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 31%;
+    top: 53%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+    }
+
+#text4{
+
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 31%;
+    top: 69%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+}
+
+#text5{
+
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 31%;
+    top: 85%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+
+    color: #000000;
+}
+
+#coin1
+{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 31%;
+    top: 27%;
+    border-radius: 70%;
+    overflow: hidden;
+    background: #FFC83A;
+}
+
+#coin2
+{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 31%;
+    top: 43%;
+    border-radius: 70%;
+    overflow: hidden;
+    background: #FFC83A;
+}
+
+#coin3
+{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 31%;
+    top: 59%;
+    border-radius: 70%;
+    overflow: hidden;
+    background: #FFC83A;
+}
+
+#coin4
+{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 31%;
+    top: 75%;
+    border-radius: 70%;
+    overflow: hidden;
+    background: #FFC83A;
+}
+
+#coin5
+{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 31%;
+    top: 91%;
+    border-radius: 70%;
+    overflow: hidden;
+    background: #FFC83A;
+}
+
+#point1{
+
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    left: 40%;
+    top: 27%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #000000;
+}
+
+#point2{
+
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    left: 40%;
+    top: 43%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #000000;
+}
+
+#point3{
+    
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    left: 40%;
+    top: 59%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #000000;
+}
+
+#point4{
+
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    left: 40%;
+    top: 75%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #000000;
+}
+
+#point5{
+
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    left: 40%;
+    top: 91%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    
+    color: #000000;
+}
+
+#exchange1{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    right:4%;
+    top: 26%;
+    
+    background: #FFFFFF;
+    border: 1px solid #207EE1;
+    border-radius: 30px;
+}
+
+#exchange2{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    right:4%;
+    top: 42%;
+
+    background: #FFFFFF;
+    border: 1px solid #207EE1;
+    border-radius: 30px;
+}
+
+#exchange3{
+    
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    right:4%;
+    top: 58%;
+
+    background: #FFFFFF;
+    border: 1px solid #207EE1;
+    border-radius: 30px;
+}
+
+#exchange4{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    right:4%;
+    top: 74%;
+
+    background: #FFFFFF;
+    border: 1px solid #207EE1;
+    border-radius: 30px;
+}
+
+#exchange5{
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 98px;
+    height: 35px;
+    right:4%;
+    top: 90%;
+
+    background: #FFFFFF;
+    border: 1px solid #207EE1;
+    border-radius: 30px;
+}
+
+#extext1{
+
+    position: absolute;
+    width: 59px;
+    height: 23px;
+    right:9%;
+    top: 27%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    
+    color: #207EE1;
+}
+
+#extext2{
+
+    position: absolute;
+    width: 59px;
+    height: 23px;
+    right:9%;
+    top: 43%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #207EE1;
+}
+
+#extext3{
+
+    position: absolute;
+    width: 59px;
+    height: 23px;
+    right:9%;
+    top: 59%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #207EE1;
+}
+
+#extext4{
+
+    position: absolute;
+    width: 59px;
+    height: 23px;
+    right:9%;
+    top: 75%;
+    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+    
+    color: #207EE1;
+}
+
+#extext5{
+
+    position: absolute;
+    width: 59px;
+    height: 23px;
+    right:9%;
+    top: 91%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #207EE1;
+}
+
+#line1{
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 92%;
+    left: 0px;
+    top: 33%;
+    
+    border: 1px solid #EDEDED;
+    transform: rotate(-0.28deg);
+}
+
+#line2{
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 92%;
+    left: 0px;
+    top: 49%;
+    
+    border: 1px solid #EDEDED;
+    transform: rotate(-0.28deg);
+}
+ 
+#line3{
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 92%;
+    left: 0px;
+    top: 65%;
+    
+    border: 1px solid #EDEDED;
+    transform: rotate(-0.28deg);
+}
+ 
+#line4{
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 92%;
+    left: 0px;
+    top: 81%;
+    
+    border: 1px solid #EDEDED;
+    transform: rotate(-0.28deg);
+}

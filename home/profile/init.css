@@ -1,0 +1,297 @@
+/*전체적으로 왼쪽으로 8px 수정필요 .완료--*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: white;
+    overflow: hidden;
+}
+
+#window{
+    width: 350px;
+    height: 740px;
+}
+
+#init {
+    width: 100%;
+    height: 740px;
+    background: #FFFFFF;
+}
+
+#back {
+    /*뒤로가기*/
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 15px;
+    top: 27px;
+
+}
+
+#point_image {
+    /*동전모양*/
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 21%;
+    top: 28px;
+}
+
+#point_box {
+    /*포인트쪽 동그라미*/
+    position: absolute;
+    width: 102px;
+    height: 34px;
+    right: 2%;
+    top: 28px;
+
+    background: #C6E0F3;
+    border-radius: 29px;
+}
+
+#point_text {
+    /*포인트 텍스트박스*/
+    position: absolute;
+    width: 51px;
+    height: 23px;
+    right: 4%;
+    top: 33px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+}
+
+#blue_box {
+    /*위쪽 파란색 박스*/
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    top: 0px;
+    background: #207EE1;
+}
+
+#profile_image {
+    /*프로필 사진 윤곽*/
+    position: absolute;
+    width: 108px;
+    height: 108px;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #E2EBF1;
+
+}
+
+#camera_image {
+    /*카메라 그림*/
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 18%;
+
+}
+
+#user_name {
+    /* 이승운 */
+    position: absolute;
+    width: 67px;
+    height: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 29%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 35px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FDFDFD;
+
+}
+
+#user_id {
+
+    /* @IDDIDDID */
+
+    position: absolute;
+    width: 112px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 34%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+
+    text-align: center;
+    color: #FDFDFD;
+
+}
+
+#exchange_box {
+
+    /*포인트 교환소 박스*/
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 90%;
+    height: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 59%;
+
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 21px -4px rgba(159, 159, 159, 0.25);
+    border-radius: 9px;
+
+}
+
+#exchange_image {
+
+    /*포인트 교환소 이미지*/
+    position: absolute;
+    width: 41px;
+    height: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 56%;
+
+}
+
+#exchange_text {
+
+    /*포인트 교환소 텍스트 박스*/
+    position: absolute;
+    width: 116px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 62%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+
+    color: #000000;
+
+}
+
+#list_checkbox {
+
+    /*내역 확인 배경 박스*/
+    box-sizing: border-box;
+
+    position: absolute;
+    width:43%;
+    height: 120px;
+    left: 5%;
+    bottom: 10%;
+
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 21px -4px rgba(159, 159, 159, 0.25);
+    border-radius: 9px;
+
+}
+
+#list_image {
+    /*내역 확인 이미지*/
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 21%;
+    bottom: 18%;
+}
+
+#checkbox_text {
+
+    /*내역확인 텍스트박스*/
+    position: absolute;
+    width: 79px;
+    height: 29px;
+    left: 16%;
+    bottom: 13%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+
+    color: #000000;
+
+}
+
+#setting_box {
+
+    /*설정 배경박스*/
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 40%;
+    height: 120px;
+    right: 6%;
+    bottom: 10%;
+
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 0px 21px -4px rgba(159, 159, 159, 0.25);
+    border-radius: 9px;
+
+}
+
+#setting_image {
+
+    /*설정 이미지*/
+    position: absolute;
+    width: 32.54px;
+    height: 31.39px;
+    right: 21%;
+    bottom: 18%;
+
+
+}
+
+#setting_text {
+
+    /*설정 텍스트박스*/
+    position: absolute;
+    width: 37px;
+    height: 29px;
+    right: 20%;
+    bottom: 13%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+
+    color: #000000;
+}
