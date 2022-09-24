@@ -9,10 +9,17 @@
     </script>
     <script src="https://kit.fontawesome.com/cf459ed31b.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>add</title>
 </head>
 <body>
-    <input id=image type="file" accept="image/*" capture="camera">
+    <form method="POST"enctype="multipart/form-data"action="{{url_for('content_upload')}}">
+    	<b>사진 첨부</b>
+        <input name="img" id="image" type="file" accept="image/*" capture="camera"/>
+        <b>내용 적기</b>
+        <textarea name="content" cols="40"rows="8"></textarea> 
+       	<button>제출</button>
+    </form>
+    
 </body>
 </html>

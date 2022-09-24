@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Google Maps</title>
-    <script defer src="./index.js"></script>
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADamnT7HGNIZ3bEFJgMt2R4uD0Df1HXh4&callback=initMap"
-    ></script>
-  </head>
-  <body>
-    <div id="map" style="height: 600px;"></div>
-  </body>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+  <link rel="stylesheet" href="./signin.css">
+  <div class="main">
+      <h1 class="logo">Welcome</h1>
+      <div class="container">
+          <input type="text" placeholder="ID" id="id" class="account">
+          <input type="password" placeholder="Password" id="password" class="account">
+          <button id="login" class="account">login</button>
+          <button ><a href="signup.html" >회원가입</a></button>
+          <p id="alert" class="account"> </p>
+      </div>
+  </div>   
+  <script src="script.js"></script>
+</body>
 </html>
