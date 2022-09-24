@@ -9,7 +9,16 @@
     // 지도에 표시된 마커 객체를 가지고 있을 배열입니다
     var markers = [];
     var overlays = [];
+    var clicked = false;
     var locPosition;
+    
+    function setMarkers(map) {
+        for (var i = 0; i < markers.length; i++) {
+            if (markers[i] && currOver != overlays[i]) {
+                markers[i].setMap(map);
+            }
+        }
+    }
 }
 
 
@@ -40,8 +49,13 @@
             map: map,
             position: locPosition
         });
+        if (currOver) {
+            currOver.setMap(null);
+        }
         // 지도 중심좌표를 접속위치로 변경합니다
         map.setCenter(locPosition);
+        if(clicked)
+            calcDistc();
     }
 }
 
@@ -51,38 +65,34 @@
     var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
     var imageSize = new kakao.maps.Size(24, 35);
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+    var currOver = null;
     var positions = [
         {
-            content: '<div>카카오</div>',
             latlng: new kakao.maps.LatLng(35.338526759033975, 129.020394573412)
         },
         {
-            content: '<div>카카오</div>',
             latlng: new kakao.maps.LatLng(35.33590347260101, 129.0231445305009)
         },
         {
-            content: '<div>카카오</div>',
             latlng: new kakao.maps.LatLng(35.333380, 129.022047)
         },
         {
-            content: '<div>카카오</div>',
             latlng: new kakao.maps.LatLng(35.33493615118316, 129.01847965892148)
         }
     ];
-    var content = '<div class="wrap">' +
+    var content =
+        '<div class="wrap">' +
         '    <div class="info">' +
-        '        <div class="title">' +
-        '            쓰레기가 너무 많아요'+
-        '        </div>' +
+        '        <div class="title">쓰레기가 너무 많아요</div>' +
+        '        <button class="close" onclick="closeOverlay()" title="닫기"></button>' +
         '        <div class="body">' +
-    '                <img src="https://img.etoday.co.kr/pto_db/2022/01/600/20220128134644_1713593_696_507.jpg" width="150" height="100">'+
-    '                <button><i class="fa-solid fa-route"></i>플로깅</button>' +
-        '        </div>' +
-        '    </div>' +
+        '           <div class="image"><img src="https://img.etoday.co.kr/pto_db/2022/01/600/20220128134644_1713593_696_507.jpg" width="100%"></image></div>' +
+        '           <button onclick="doDisplay()">해결하기</button>' +
+        '       </div>' +
+        '   </div>' +
         '</div>';
 
-    var currOver = null;
-    
+
     for (var i = 0; i < positions.length; i++) {
         // 마커를 생성합니다
         var marker = new kakao.maps.Marker({
@@ -93,47 +103,116 @@
 
         var overlay = new kakao.maps.CustomOverlay({
             content: content,
-            position: marker.getPosition()       
+            position: marker.getPosition()
         });
         markers[i] = marker;
         overlays[i] = overlay;
-        
+
         kakao.maps.event.addListener(marker, 'click', makeOutListener(overlay));
         kakao.maps.event.addListener(marker, 'click', makeOverListener(overlay));
     }
 
     function makeOverListener(overlay) {
-        return function() {
-            if(currOver){
+        return function () {
+            if (currOver) {
                 currOver.setMap(null);
             }
-            overlay.setMap(map);
-            currOver = overlay;
+            if (!clicked) {
+                overlay.setMap(map);
+                currOver = overlay;
+            }
         };
     }
-    
+
     function makeOutListener(overlay) {
-        return function() {
+        return function () {
             overlay.setMap(null);
         };
     }
 
-    kakao.maps.event.addListener(map, 'click', function() {        
-        for (var i = 0; i < positions.length; i++) {
-            overlays[i].setMap(null);
-        }
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function closeOverlay() {
+        currOver.setMap(null);
+    }
 }
+
+
+//----------------------- 플로깅 버튼 -----------------------
+{
+    var clickLine = null,
+        distance = 0
+        menu = menu = document.querySelector('#ploggingWindow');
+
+    function doDisplay(){
+        menu.classList.toggle('active');
+        calcDistc();
+    }
+
+    function calcDistc() {
+        clickLine = new kakao.maps.Polyline({
+            path: [locPosition, currOver.getPosition()]
+        });
+        distance = Math.round(clickLine.getLength());
+        closeOverlay();
+        clicked = true;
+        setMarkers(null);
+        addresscheck();
+        document.getElementById("distance").innerText = distance + 'm';
+    }
+
+    function complete() {
+        if(currOver){
+            calcDistc();
+            if (distance < 200) {
+                //카메라찍음 사진 전송
+                swal("확인 후 포인트가 지급됩니다.");
+                markers[overlays.indexOf(currOver)].setMap(null);
+                markers[overlays.indexOf(currOver)] = null;
+                overlays[overlays.indexOf(currOver)] = null;
+                cancel();
+            }
+            else {
+                swal("해당 위치로 이동하세요.");
+            }
+        }
+    }
+
+    function cancel() {
+        menu.classList.toggle('active');
+        document.getElementById("address").innerText = "";
+        document.getElementById("distance").innerText = "";
+        currOver = null;
+        clicked = false;
+        setMarkers(map);
+    }
+    
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+    function addresscheck() {
+        searchDetailAddrFromCoords(currOver.getPosition(), function (result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+                var detailAddr = result[0].address.address_name;
+                document.getElementById("address").innerText = detailAddr;
+            }
+        });
+    }
+
+    function searchDetailAddrFromCoords(coords, callback) {
+        // 좌표로 법정동 상세 주소 정보를 요청합니다
+        geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+    }
+}
+
+
+//----------------------- 등록 버튼 -----------------------
+{
+    function addMarker() {
+
+    }
+}
+
+
+
+
+
+
+

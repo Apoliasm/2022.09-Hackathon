@@ -6,29 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cbf9451708218b96499c4a0194caec93">
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cbf9451708218b96499c4a0194caec93&libraries=services">
     </script>
     <script src="https://kit.fontawesome.com/cf459ed31b.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>ZeroWaste</title>
 </head>
 
 <body>
     <div id="map">
+        <div id="ploggingWindow">
+            <section class="addranddistc">
+                <div id="address"></div>
+                <div id="distance"></div>
+            </section>
+            <section class="ploggBtn">
+                <button id="leftBtn" onclick="complete()">해결</button>
+                <button id="rightBtn" onclick="cancel()">포기</button>
+            </section>
+        </div>
     </div>
     <div id="buttons">
         <ul>
             <li>
-                <button id="add">
+                <button id="add" onclick="location.href='add.html'">
                     <i class="fa-solid fa-plus"></i>
                     <span>등록</span>
                 </button>
             </li>
             <li><button id="userInfo"><i class="fa-solid fa-user"></i><span>내 정보</span></button></li>
         </ul>
+        <button id="location" onclick="displayMarker(locPosition)"><i class="fa fa-crosshairs"></i></button>
     </div>
-    <button id="location" onclick="displayMarker(locPosition)"><i class="fa fa-crosshairs"></i></button>
+
 </body>
 
 </html>
