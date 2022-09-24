@@ -1,0 +1,277 @@
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{
+    background-color:black;
+}
+
+#init{
+    /*전체 배경*/
+    position: relative;
+    width: 414px;
+    height: 896px;
+
+    background: #FFFFFF;
+}
+
+#init2{
+    position: absolute;
+    width: 414px;
+    height: 812px;
+    left: 8px;
+    top: 84px;
+
+    background: #FAFAFA;
+}
+
+#back{
+
+    /*뒤로가기*/
+    position: absolute;
+    width: 11.5px;
+    height: 24.5px;
+    left: 28px;
+    top: 33px;
+
+    background: #000000;
+    background : url(back.png);
+}
+
+
+#text_up{
+    
+    /* 교환하기 */
+
+    position: absolute;
+    width: 115px;
+    height: 29px;
+    left: 149px;
+    top: 28px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+    color: #000000;
+
+}
+
+#pointbox{
+
+    /*포인트쪽 동그라미*/
+    position: absolute;
+    width: 102px;
+    height: 34px;
+    left: 296px;
+    top: 27px;
+
+    background: #C6E0F3;
+    border-radius: 29px;
+
+}
+
+#point_text{
+
+    /*포인트 텍스트박스*/
+    position: absolute;
+    width: 51px;
+    height: 23px;
+    left: 336px;
+    top: 32px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+
+}
+
+#coin{
+
+    /*동전 그림*/
+    position: absolute;
+    width: 33.69px;
+    height: 33.69px;
+    left: 296.15px;
+    top: 27.15px;
+
+    border-radius: 70%;
+    overflow: hidden;
+
+    background: #DA9D00;
+
+}
+
+#gift_box{
+    position: absolute;
+    width: 371px;
+    height: 283px;
+    left: 28px;
+    top: 104px;
+
+    background: #FFFFFF;
+}
+
+#blue_box{
+    position: absolute;
+    width: 371px;
+    height: 65px;
+    left: 28px;
+    top: 322px;
+
+    background: #3747D6;
+}
+
+#exchange_text{
+    position: absolute;
+    width: 74px;
+    height: 29px;
+    left: 177px;
+    top: 340px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#gift_img{
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 59px;
+    top: 134px;
+
+}
+
+#gift_name{
+
+    /* 커피 기프티콘 이름 */
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    left: 153px;
+    top: 134px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+#line{
+
+    /* Line 1 */
+    position: absolute;
+    width: 326px;
+    height: 0px;
+    left: 51px;
+    top: 237px;
+
+    border: 1px solid #EDEDED;
+
+}
+
+#point_need{
+
+    /* 필요 포인트 */
+
+    position: absolute;
+    width: 68px;
+    height: 20px;
+    left: 202px;
+    top: 257px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #6A6A6A;
+
+}
+
+#point_coin{
+
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    left: 283px;
+    top: 254px;
+
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+#gift_text{
+    /* 3,000 */
+
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    left: 310px;
+    top: 239px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    /* identical to box height */
+
+
+    color: #3747D6;
+}
+
+#complete_text{
+
+    position: absolute;
+    width: 195px;
+    height: 29px;
+    left: 116px;
+    top: 227px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+
+#bill_img{
+
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 185px;
+    top: 164px;
+
+}
