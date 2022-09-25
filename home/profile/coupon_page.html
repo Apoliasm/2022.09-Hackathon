@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel = "stylesheet" href = "coupon_page.css"  />
+    <script src="subMenu.js" defer></script>
 </head>
 <body>
     <div class="window">
@@ -20,7 +21,7 @@
         <p id = "coin">
             <img src = "./images/coin.png"></img>
         </p>
-        <p id = "point_text">12270</p>
+        <p id="point_text" align="right"></p>
         <p id = "heartbox"><img src = "./images/heartbox.png"></img></p>
         <P id = "coffee_cakebox"></P>
         <p id = "coffee_caketext">
@@ -84,10 +85,10 @@
             <img src = "./images/coin.png"></img>
         </p>
         <p id = "point1">
-            2,000
+            1,500
         </p>
         <p id = "point2">
-            1,500
+            2,000
         </p>
         <p id = "point3">
             3,000
@@ -96,35 +97,35 @@
             4,000
         </p>
         <p id = "point5">
-            3,500
+            5,000
         </p>
     
-        <p id = "exchange1" OnClick="location.href ='exchange.html'">
-            <p id = "extext1" OnClick="location.href ='exchange.html'">
+        <p id = "exchange1" onclick="exchanging(1500)">
+            <p id = "extext1" onclick="exchanging(1500)">
                 교환하기
             </p>
         </p>
     
-        <p id = "exchange2">
-            <p id = "extext2">
+        <p id = "exchange2" onclick="exchanging(2000)">
+            <p id = "extext2" onclick="exchanging(2000)">
                 교환하기
             </p>
         </p>
     
-        <p id = "exchange3">
-            <p id = "extext3">
+        <p id = "exchange3" onclick="exchanging(3000)">
+            <p id = "extext3" onclick="exchanging(3000)">
                 교환하기
             </p>
         </p>
     
-        <p id = "exchange4">
-            <p id = "extext4">
+        <p id = "exchange4" onclick="exchanging(4000)">
+            <p id = "extext4" onclick="exchanging(4000)">
                 교환하기
             </p>
         </p>
     
-        <p id = "exchange5">
-            <p id = "extext5">
+        <p id = "exchange5" onclick="exchanging(5000)">
+            <p id = "extext5" onclick="exchanging(5000)">
                 교환하기
             </p>
         </p>

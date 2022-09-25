@@ -224,6 +224,7 @@ button:active span {
 }
 
 .info .body .image {
+    text-align: center;
     height: 114px;
 }
 
@@ -373,7 +374,7 @@ button:active span {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 85%;
+    width: 80%;
     height: 50%;
     z-index: 4;
     border-radius: 10px;
@@ -397,12 +398,11 @@ button:active span {
 }
 
 #postingWindow .imageBox {
-    width: 100%;
     height: 70%;
+    text-align: center;
 }
 
 #postingWindow .imageBox #frame {
-    width: 100%;
     height: 100%;
 }
 

@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="exchange.css" />
+    <script src="subMenu.js" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -23,10 +25,10 @@
     <p id="coin">
         <img src="./images/coin.png"></img>
     </p>
-    <p id="point_text">12270</p>
+    <p id="point_text" align="right"></p>
     <p id="gift_box"></p>
-    <p id="blue_box" OnClick="location.href ='last_change.html'"></p>
-    <p id="exchange_text" OnClick="location.href ='last_change.html'">
+    <p id="blue_box" onclick="calcPoint()"></p>
+    <p id="exchange_text" onclick="calcPoint()">
         교환하기
     </p>
     <p id="gift_img">
@@ -42,7 +44,7 @@
     <p id="point_coin">
         <img src="./images/coin.png"></img>
     </p>
-    <p id="gift_text">2,000</p>
+    <p id="gift_text"></p>
 </body>
 
 </html>

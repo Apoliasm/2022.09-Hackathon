@@ -70,7 +70,7 @@
             position: locPosition
         });
 
-        marker.setZIndex(0);
+        mainMarker.setZIndex(0);
 
         if (clicked) {
             calcDistc();
@@ -90,12 +90,35 @@
 }
 
 
+var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+var imageSize = new kakao.maps.Size(24, 35);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+var currOver = null;
+
+function makeOverListener(overlay) {
+    return function () {
+        if (currOver) {
+            currOver.setMap(null);
+        }
+        if (!clicked) {
+            overlay.setMap(map);
+            currOver = overlay;
+        }
+    };
+}
+
+function makeOutListener(overlay) {
+    return function () {
+        overlay.setMap(null);
+    };
+}
+
+function closeOverlay() {
+    currOver.setMap(null);
+}
 //----------------------- test 마커 -----------------------
+/*
 {
-    var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-    var imageSize = new kakao.maps.Size(24, 35);
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-    var currOver = null;
     var positions = [
         {
             latlng: new kakao.maps.LatLng(35.338526759033975, 129.020394573412)
@@ -144,30 +167,8 @@
         kakao.maps.event.addListener(marker, 'click', makeOutListener(overlay));
         kakao.maps.event.addListener(marker, 'click', makeOverListener(overlay));
     }
-
-    function makeOverListener(overlay) {
-        return function () {
-            if (currOver) {
-                currOver.setMap(null);
-            }
-            if (!clicked) {
-                overlay.setMap(map);
-                currOver = overlay;
-            }
-        };
-    }
-
-    function makeOutListener(overlay) {
-        return function () {
-            overlay.setMap(null);
-        };
-    }
-
-    function closeOverlay() {
-        currOver.setMap(null);
-    }
 }
-
+*/
 
 //----------------------- 플로깅 버튼 -----------------------
 {
@@ -345,7 +346,7 @@
             '           <button class="close" onclick="closeOverlay()" title="닫기"></button>' +
             '        </div>' +
             '        <div class="body">' +
-            '           <div class="image"><img src="' + URL.createObjectURL(file) + '" width="100%"></image></div>' +
+            '           <div class="image"><img src="' + URL.createObjectURL(file) + '" height="100%"></image></div>' +
             '           <button onclick="doDisplay()">해결하기</button>' +
             '       </div>' +
             '   </div>' +
