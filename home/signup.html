@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+  <link rel="stylesheet" href="./signup.css">
+  <div class="main">
+    <script>
+        function signup_geturl(){
+            const sign_name = document.getElementById('name_input')
+            const sign_id = document.getElementById('id_input')
+            const sign_password = document.getElementById('pw_input')
+            const sign_login = document.getElementById('signup_text')
+          if (sign_name.value=='') {
+              alert('이름을 입력하세요')
+              var url = './signup.html';
+              return url;
+          }else if(sign_id.value=='') {
+            alert('아이디를 입력하세요')
+              var url = './signup.html';
+              return url;
+          }else if(sign_password.value=='') {
+            alert('비밀번호를 입력하세요')
+              var url = './signup.html';
+              return url;
+          }else{
+            alert(sign_name.value+'님 가입을 환영합니다')
+            var url = './login.html';
+            return url;
+          }
+        }
+      </script>
+      <p id="blue_box"></p>
+      <p id="logo">Make Your Account</p>
+
+      <input type="text" style="font-size:40px" id="name_input" placeholder="Name" autocomplete="off">
+
+      <input type="text" style="font-size:40px" id="id_input" placeholder="Id" autocomplete="off">
+
+      <input type="password" style="font-size:40px" id="pw_input" placeholder="Password" autocomplete="off">
+
+      <button id="signup_text" onclick="document.location.href=signup_geturl()">가입</button>
+
+      <div class="container">
+          <p id="alert" class="account"> </p>
+      </div>
+  </div>
+</body>
+</html>

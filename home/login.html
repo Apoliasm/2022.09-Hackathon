@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./signin.css">
+    <script src="https://kit.fontawesome.com/cf459ed31b.js" crossorigin="anonymous"></script>
+    <script>
+        function geturl() {
+            const id = document.getElementById('id_input')
+            const password = document.getElementById('pw_input')
+            const login = document.getElementById('signup_label')
+            let errStack = 0;
+            if (id.value == 'computer' && password.value == '2019') {
+                alert('로그인 되었습니다!')
+                var url = '../home.html';
+                return url;
+            } else if (id.value == '') {
+                alert('아이디를 입력하세요')
+                var furl = './login.html';
+                return furl;
+            } else if (password.value == '') {
+                alert('비밀번호를 입력하세요')
+                var furl = './login.html';
+                return furl;
+            }
+            else {
+                alert('아이디 또는 비밀번호가 틀렸습니다.')
+                var furl = './login.html';
+                return furl;
+            }
+
+            if (errStack >= 5) {
+                alert('비밀번호를 5회 이상 틀리셨습니다. 비밀번호 찾기를 권장드립니다.')
+                var furl = './login.html';
+                return furl;
+            }
+
+        }
+    </script>
+    <div class="main">
+        <p id="blue_box"></p>
+        <p id="main_logo">Zero Waste</p>
+
+        <input type="text" id="id_input" placeholder="Id" autocomplete="off">
+        <input type="password" id="pw_input" placeholder="Password" autocomplete="off">
+
+        <button id="signup_label" onclick="document.location.href=geturl()">로그인</button>
+        <p id="signup_text"><a href="./signup.html">회원가입</a></p>
+        <p id="alert" class="account"> </p>
+        <p id = "line"></p>
+    </div>
+    <section class="Easy-sgin-in-wrap">
+        <h2>Easier sign in</h2>
+        <ul class="sign-button-list">
+            <li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
+            <li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+            <li><button><i class="fab fa-line"></i><span>line</span></button></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
