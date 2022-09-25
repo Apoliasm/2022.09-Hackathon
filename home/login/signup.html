@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="signup.js"></script>
+  <title>Login</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="./signup.css">
+  <div class="main">
+    <p id="blue_box"></p>
+    <p id="logo">Make Your Account</p>
+
+    <input type="text" style="font-size:40px" id="name_input" placeholder="Name" autocomplete="off">
+
+    <input type="text" style="font-size:40px" id="id_input" placeholder="Id" autocomplete="off">
+
+    <input type="password" style="font-size:40px" id="pw_input" placeholder="Password" autocomplete="off">
+
+    <button id="signup_text" onclick="signup_geturl()">가입</button>
+
+    <div class="container">
+      <p id="alert" class="account"> </p>
+    </div>
+  </div>
+</body>
+
+</html>

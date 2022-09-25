@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body{
+    background-color:white;
+    overflow: hidden;
+}
+
+#init{
+    /*전체 배경*/
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: #FFFFFF;
+}
+
+#init2{
+    position: absolute;
+    width: 100%;
+    height: 740px;
+    background: #FFFFFF;
+    top: 84px;
+}
+#back{
+    /*뒤로가기*/
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    left: 15px;
+    top: 27px;
+
+}
+
+#text_up{
+    /* 교환하기 */
+    position: absolute;
+    width: 115px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 6%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+    color: #000000;
+
+}
+
+#pointbox{
+
+    /*포인트쪽 동그라미*/
+    position: absolute;
+    width: 102px;
+    height: 34px;
+    right: 2%;
+    top: 28px;
+
+    background: #C6E0F3;
+    border-radius: 29px;
+
+}
+
+#point_text{
+
+    /*포인트 텍스트박스*/
+    position: absolute;
+    width: 51px;
+    height: 23px;
+    right: 6%;
+    top: 33px;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+
+    color: #000000;
+
+}
+
+#coin{
+    /*동전 그림*//*동전모양*/
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 21%;
+    top: 28px;
+    border-radius: 70%;
+    overflow: hidden;
+
+    background: #DA9D00;
+
+}
+
+
+#blue_box{
+    position: absolute;
+    width: 85%;
+    height: 65px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #207EE1;
+    border-radius: 10px;
+}
+
+#exchange_text{
+    position: absolute;
+    width: 74px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#gift_img{
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 8%;
+    top: 17%;
+
+}
+
+#gift_name{
+
+    /* 커피 기프티콘 이름 */
+    position: absolute;
+    width: 166px;
+    height: 29px;
+    right: 10%;
+    top: 18%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}
+
+#line{
+
+    /* Line 1 */
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 92%;
+    height: 0px;
+    top: 31%;
+
+    border: 1px solid #EDEDED;
+
+}
+
+#point_need{
+    /* 필요 포인트 */
+    position: absolute;
+    right: 35%;
+    top:34%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #6A6A6A;
+
+}
+
+#point_coin{
+
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    right: 27%;
+    top:34%;
+
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+#gift_text{
+    /* 3,000 */
+
+    position: absolute;
+    width: 65px;
+    height: 35px;
+    right: 7%;
+    top:32.5%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+    /* identical to box height */
+
+
+    color: #207EE1;
+}
+
+#complete_text{
+    position: absolute;
+    width: 195px;
+    height: 29px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 35%;
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+
+#bill_img{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 30%;
+
+}
+
+/*----------------------- swal -----------------------*/
+.swal-modal {
+    width: 280px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 1px 15px var(--grey-dark-color);
+}
+
+.swal-text {
+    padding-top: 2px;
+    font-size: 18px;
+    color: var(--grey-dark-color);
+    font-weight: bold;
+}
+
+.swal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-bottom: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.swal-button {
+    padding: 11px 25px;
+    border-radius: 10px;
+    width: 86px;
+    background-color: #207EE1;
+    font-size: 12px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal-button--cancel {
+    background-color: #efefef;
+}

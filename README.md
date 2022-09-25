@@ -29,4 +29,12 @@
 2. flask를 이용한 서버</br>
 3. 포인트 관리 시스템</br>
 
+시연 링크 : https://classy-snickerdoodle-953559.netlify.app
+
 :white_check_mark: 시연영상 : https://youtu.be/4L6hGxTipos
+1. 0:00 팀소개
+2. 0:07 주제소개 및 프로젝트 간략 설명
+3. 0: 56 로그인 밒 회원가입
+4. 1:11 사진 촬영 및 업로드
+5. 2:00 해결
+6. 3:06 포인트 상점 및 결제

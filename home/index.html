@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./login/signin.css">
+    <script src="https://kit.fontawesome.com/cf459ed31b.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <p id="blue_box"></p>
+        <p id="main_logo">Zero Waste</p>
+
+        <input type="text" id="id_input" placeholder="Id" autocomplete="off">
+        <input type="password" id="pw_input" placeholder="Password" autocomplete="off">
+
+        <button id="signup_label" onclick="geturl()">로그인</button>
+        <p id="signup_text"><a href="./login/signup.html">회원가입</a></p>
+        <p id="alert" class="account"> </p>
+        <p id = "line"></p>
+    </div>
+    <section class="Easy-sgin-in-wrap">
+        <h2>Easier sign in</h2>
+        <ul class="sign-button-list">
+            <li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
+            <li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+            <li><button><i class="fab fa-line"></i><span>line</span></button></li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
