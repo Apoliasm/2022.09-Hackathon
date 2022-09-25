@@ -29,4 +29,4 @@
 2. flask를 이용한 서버</br>
 3. 포인트 관리 시스템</br>
 
-:white_check_mark: 시연영상 : 
+:white_check_mark: 시연영상 : https://youtu.be/4L6hGxTipos
