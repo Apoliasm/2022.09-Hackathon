@@ -30,6 +30,8 @@
 3. 포인트 관리 시스템</br>
 
 시연 링크 : https://classy-snickerdoodle-953559.netlify.app
+ID : computer
+PW : 2019
 
 :white_check_mark: 시연영상 : https://youtu.be/4L6hGxTipos
 1. 0:00 팀소개
